@@ -1,0 +1,24 @@
+{
+  "headerLabel": "Menu",
+  "groupItems": [
+    {
+      "menuItems": [
+        {
+          "icon": { "pack": "bbds-fin", "icon": "shopping" },
+          "label": "Produtos",
+          "menuLevelTwo": [
+            {
+              "label": "Projeto Padrão",
+              "path": "/pages/frames/<%= dasherize(name) %>"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "label": "Central de Atendimento BB",
+    "caption": "0800 729 9905,opção 1.",
+    "icon": { "pack": "bbds-rel", "icon": "call-center" }
+  }
+}

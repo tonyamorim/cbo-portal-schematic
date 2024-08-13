@@ -1,0 +1,10 @@
+{
+  "itens": [
+    {
+      "descricao": "Projeto Padrão",
+      "caminho": "/pages/frames/<%= dasherize(name) %>",
+      "pacoteIcone": "bbds-fin",
+      "icone": "shopping"
+    }
+  ]
+}

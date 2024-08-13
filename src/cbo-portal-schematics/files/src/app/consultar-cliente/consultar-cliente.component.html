@@ -1,0 +1,34 @@
+<cbo-inline-message [warning]="msgAlert" *ngIf="msgAlert"></cbo-inline-message>
+<bb-card accent="info">
+  <bb-card-header>Consultar MCI pelo CPF</bb-card-header>
+  <bb-card-body>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <bb-text-field label="CPF">
+            <input
+              type="text"
+              bbInputRef
+              fullWidth
+              id="codigoCpf"
+              [(ngModel)]="codigoCpf"
+            />
+          </bb-text-field>
+        </div>
+      </div>
+    </div>
+  </bb-card-body>
+  <bb-card-footer>
+    <div class="text-right">
+      <button
+        bbButton
+        outline
+        id="consultar"
+        status="primary"
+        (click)="consultar()"
+      >
+        Consultar
+      </button>
+    </div>
+  </bb-card-footer>
+</bb-card>

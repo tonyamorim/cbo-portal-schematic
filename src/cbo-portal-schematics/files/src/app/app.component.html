@@ -1,0 +1,21 @@
+<bb-layout>
+  <bb-layout-column class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 *ngIf="nomePagina">{{ nomePagina }}</h4>
+      </div>
+
+      <div class="col-md-4" style="display: flex; justify-content: end">
+        <label style="color: #0759ab">
+          {{ informacoes }}
+        </label>
+      </div>
+    </div>
+
+    <br />
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </bb-layout-column>
+</bb-layout>

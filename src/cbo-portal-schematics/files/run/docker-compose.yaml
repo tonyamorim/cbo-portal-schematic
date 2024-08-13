@@ -1,0 +1,22 @@
+version: "3.4"
+services:
+  cbo-portal-acesso:
+    container_name: "cbo-portal-acesso"
+    image: docker.binarios.intranet.bb.com.br/bb/cbo/cbo-portal-acesso:1.0.19
+    ports:
+      - "4201:80"
+    networks:
+      - cbo-portal-net
+  cbo-portal-web-ui:
+    container_name: "cbo-portal-web-ui"
+    image: docker.binarios.intranet.bb.com.br/bb/cbo/cbo-portal-web-ui:1.2.43
+    ports:
+      - "4202:80"
+    volumes:
+      - $PWD/run/menu-acesso-rapido.json:/usr/share/nginx/html/cbo-portal-web-ui/assets/menu-acesso-rapido.json
+      - $PWD/run/menu.json:/usr/share/nginx/html/cbo-portal-web-ui/assets/menu.json
+    networks:
+      - cbo-portal-net
+networks:
+  cbo-portal-net:
+    driver: bridge
